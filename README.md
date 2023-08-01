@@ -1,2 +1,2 @@
 # leetcode-practice
-This repo is fully based in my ability to solve leetcode JS problems. 
+This repo is to track my progess on solving leetcode JS problems.
