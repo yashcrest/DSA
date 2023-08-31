@@ -1,2 +1,2 @@
 # Leetcode-JS-Pratice
-This repo is to track my progess on solving leetcode JS problems.
+This repo is dedicated to solving leetcode problems.

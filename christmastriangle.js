@@ -1,3 +1,12 @@
+/*
+program to print
+      *
+     ***
+    *****
+   *******
+  *********
+*/ 
+
 function christsmasTraingle(s){
     let pointer = 1
     let new_pointer = s
