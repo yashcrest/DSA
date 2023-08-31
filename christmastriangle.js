@@ -7,7 +7,7 @@ program to print
   *********
 */ 
 
-function christsmasTraingle(s){
+function christsmasTree(s){
     let pointer = 1
     let new_pointer = s
     let blank = ' '
@@ -20,4 +20,4 @@ function christsmasTraingle(s){
         new_pointer -= 1
     }
 }
-christsmasTraingle(5);
+christsmasTree(5);
