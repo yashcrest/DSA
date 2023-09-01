@@ -21,3 +21,9 @@ function christsmasTree(s){
     }
 }
 christsmasTree(5);
+
+
+//recursion way
+function recursionTree(s){
+    
+}
