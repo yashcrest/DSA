@@ -1,5 +1,5 @@
 /*
-program to print
+This program prints the pattern of christmas tree
       *
      ***
     *****
