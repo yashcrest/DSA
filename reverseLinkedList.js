@@ -11,3 +11,7 @@ function reverseLinkedList(head) {
     head = prev
     return head
 }
+
+/*
+main point is two have multiple pointers which points at next item, current item, previous item 
+*/
