@@ -22,7 +22,7 @@ function getConcatenation (nums){
     let newArray = []
     for(let i=0; i < nums.length; i++){
         newArray[i] = nums[i]
-        newArray[i + nums.length] = nums[i]
+        newArray[i + nums.length] = nums[i] // this is the tricky part
     }
     return newArray
 }
