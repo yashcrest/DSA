@@ -7,6 +7,4 @@ function multiplicationArry(arr){
     }
     return answerArray
 }
-
 console.log(multiplicationArry([2,3,4,5]))
-
