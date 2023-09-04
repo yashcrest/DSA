@@ -1,2 +1,2 @@
-# Leetcode-JS-Pratice
-This repo is dedicated to solving leetcode problems.
+# Data Structure and Algorithm practice
+This repo is dedicated for DSA practice.
