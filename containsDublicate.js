@@ -38,3 +38,4 @@ function checkDuplicate(nums){
 }
 
 console.log(checkDuplicate([1,3,4,2,1]))
+
