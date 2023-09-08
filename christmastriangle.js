@@ -5,7 +5,7 @@ This program prints the pattern of christmas tree
     *****
    *******
   *********
-*/ 
+*/
 
 // function christsmasTree(s){
 //     let pointer = 1
@@ -22,15 +22,14 @@ This program prints the pattern of christmas tree
 // }
 // christsmasTree(5);
 
-
 function pyramid(rows) {
-    for(let i =0; i<rows; i++){
-        let stars = ''
-        for(let j=0; j<=i; j++){
-            stars += '*'
-        }
-        console.log(stars);
+  for (let i = 0; i < rows; i++) {
+    let stars = "";
+    for (let j = 0; j <= i; j++) {
+      stars += "*";
     }
+    console.log(stars);
+  }
 }
 
 pyramid(5);
