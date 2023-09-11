@@ -1,14 +1,13 @@
-const fibonacci = (n) => {
-    let n1 = 0
-    let n2 = 1
-    for (i=1; i<=n; i++){
-        console.log(n1);
-        sum = n1 + n2
-        n1 = n2
-        n2 = sum
-    }
+function fibonacci(n) {
+  let result;
+  if (n === 0) {
+    result = 0;
+  } else if (n === 1) {
+    result = 1;
+  } else {
+    result = fibonacci(n - 1) + fibonacci(n - 2);
+  }
+  return result;
 }
 
-fibonacci(6);
-
-//  0 1 1 2 3 5 
+console.log(fibonacci(10));
