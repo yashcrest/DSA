@@ -18,6 +18,6 @@ var longestConsecutive = function (nums) {
   }
   return longest;
 };
-nums = [100, 4, 200, 1, 3, 2];
+nums = [100, 4, 200, 5, 1, 3, 2];
 
-longestConsecutive(nums);
+console.log(longestConsecutive(nums));
