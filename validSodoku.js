@@ -12,26 +12,36 @@ board = [
 
 var validSodoku = function (board) {
   for (let i = 0; i < board.length; i++) {
-    let row = new Set();
-    let col = new Set();
-    let box = new Set();
+    let row = new Set(),
+      col = new Set(),
+      box = new Set();
     for (let j = 0; j < board[i].length; j++) {
-      if (board[i][j] !== ".") {
-        if (
-          row.has(
-            board[i][j] ||
-              col.has(board[i][j] || box.has(board[(i / 3, j / 3)]))
-          )
-        ) {
-          return false;
-        } else {
-          row.add(board[i][j]);
-          col.add(board[i][j]);
-          box.add(board[i / 3][j / 3]);
-        }
+      let _row = board[i][j];
+      let _col = board[i][j];
+      let _box =
+        board[3 * Math.floor(i / 3) + Math.floor(j / 3)][3 * (i % 3) + (j % 3)];
+
+      //check if row element is in row  array
+      if (_row !== ".") {
+        if (row.has(_row)) return false;
+        row.add(_row);
+      }
+
+      //check if column element is in column array
+      if (_col !== ".") {
+        if (col.has(_col)) return false;
+        col.add(_col);
+      }
+
+      //now check if the item is in the 3*3 box
+      if (_box !== ".") {
+        if (box.has(_box)) return false;
+        box.add(_box);
       }
     }
   }
+
+  return true;
 };
 
-validSodoku(board);
+console.log(validSodoku(board));
