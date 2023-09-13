@@ -1,10 +1,13 @@
-var groupAnagram = function (arrays) {
-    let newArray = []
-    for(let str of arrays){
-        let sorted = str.split('').sort().join('');
-        newArray.push(sorted)
+function groupAnagram(strs) {
+  if (strs.length < 2) {
+    return strs;
+  }
+  for (let i = 0; i < strs.length; i++) {
+    for (let j = i + 1; j < strs.length; j++) {
+      if (
+        strs[i].split("").sort().join("") === strs[j].split("").sort().join("")
+      ) {
+      }
     }
-    return newArray
+  }
 }
-
-console.log(groupAnagram(["eat","tea","tan","ate","nat","bat"]));
