@@ -15,27 +15,27 @@ Output: true
 */
 
 function containsDuplicate(arr) {
-    for(let i=0; i< arr.length; i++){
-        for(let j=i+1; arr.length; j++ ){
-            if(arr[i] === arr[j]){
-                return true
-            }
-        }
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; arr.length; j++) {
+      if (arr[i] === arr[j]) {
+        return true;
+      }
     }
-    return false
+  }
+  return false;
 }
 
-console.log(containsDuplicate([1,2,2,1,2]))
+console.log(containsDuplicate([1, 2, 2, 1, 2]));
 
 //another approach using built in "set" method
-function checkDuplicate(nums){
-    let newArr = new Set(nums)
-    if (newArr !== nums){
-        return true
-    } else {
-        return false
-    }
+function checkDuplicate(nums) {
+  let newArr = new Set(nums);
+  if (newArr.size !== nums.length) {
+    // to find out
+    return true;
+  } else {
+    return false;
+  }
 }
 
-console.log(checkDuplicate([1,3,4,2,1]))
-
+console.log(checkDuplicate([1, 3, 4, 2, 1]));

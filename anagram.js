@@ -23,7 +23,6 @@ function validAnagram(s, t) {
     if (!map.has(char)) {
       return false;
     }
-
     //decreasing count of each char
     const newCount = map.get(char) - 1;
     if (newCount === 0) {
