@@ -1,8 +1,4 @@
-// function anagram(s,t) {
-//     return s.split('').sort().join('') === t.split('').sort().join('');
-// }
-
-// console.log(anagram('rat', 'tar'));
+//Valid anagram 242
 
 //using a frequency counter
 function validAnagram(s, t) {
@@ -36,3 +32,15 @@ function validAnagram(s, t) {
   //if map has some character still left after traversing the t string then it will return false
   return map.size === 0;
 }
+
+// using sort method and comparing the two strings.
+var isAnagram = function (s, t) {
+  let s_sorted = s.split("").sort();
+  let t_sorted = t.split("").sort();
+
+  if (s_sorted.join() === t_sorted.join()) {
+    return true;
+  } else {
+    return false;
+  }
+};
