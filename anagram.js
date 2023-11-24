@@ -1,39 +1,32 @@
-//Valid anagram 242
+//Valid anagram qes: 242
 
 //using a frequency counter
+
 function validAnagram(s, t) {
-  //base case
+  //base case, if not the same length return false immediately
   if (s.length !== t.length) {
     return false;
   }
 
-  let map = new Map();
-  //s frequency
-  for (let char of s) {
-    map.set(char, (map.get(char) || 0) + 1);
+  //creating 2 hashmaps
+  let s_map = new Map();
+  let t_map = new Map();
+
+  for (let i = 0; i < s.length; i++) {
+    s_map.set(s[i], (s_map.get(s[i]) || 0) + 1);
+    t_map.set(t[i], (t_map.get(t[i]) || 0) + 1);
   }
 
-  //t frequency
-  for (let char of t) {
-    //if any t char not in map, return false
-    if (!map.has(char)) {
+  //comparing every char count in both s & t
+  for (let key of s_map.keys()) {
+    if (s_map.get(key) !== t_map.get(key)) {
       return false;
     }
-    //decreasing count of each char
-    const newCount = map.get(char) - 1;
-    if (newCount === 0) {
-      //if the current char frequency is 0, delete that char
-      map.delete(char);
-    } else {
-      map.set(char, newCount);
-    }
   }
-
-  //if map has some character still left after traversing the t string then it will return false
-  return map.size === 0;
+  return true;
 }
 
-// using sort method and comparing the two strings.
+// using sort method and comparing the two strings. However this method might have bigger time complexity.
 var isAnagram = function (s, t) {
   let s_sorted = s.split("").sort();
   let t_sorted = t.split("").sort();
@@ -44,3 +37,5 @@ var isAnagram = function (s, t) {
     return false;
   }
 };
+
+console.log(validAnagram("anagram", "nagaram")); //for testing result
