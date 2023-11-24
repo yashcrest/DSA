@@ -16,7 +16,7 @@
 //   return Array.from(map.values());
 // }
 
-strs = ["eat", "tea", "tan", "ate", "nat", "bat"];
+strs = ["eat", "tea", "tan", "ate", "nat", "bat", "tab"];
 
 console.log(groupAnagram(strs));
 
