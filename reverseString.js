@@ -4,4 +4,5 @@ function reverseString(str){
     return arr.reverse().join();   
 }
 
-console.log(reverseString('Yash'));
+let str = "Yash"
+console.log(reverseString(str));
