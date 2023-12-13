@@ -1,8 +1,8 @@
-//using sorted in this array is not the optimal solution
+//using sorted in this problem does not give O(n) time complexity.
 
 var longestConsecutive = function (nums) {
   let set = new Set(nums);
-  let longest = 0;
+  let longestsoFar = 0;
 
   for (let i = 0; i < nums.length; i++) {
     //checking if start of the sequence
@@ -13,10 +13,10 @@ var longestConsecutive = function (nums) {
         length += 1;
         currentNum += 1;
       }
-      longest = Math.max(length, longest);
+      longestsoFar = Math.max(length, longestsoFar);
     }
   }
-  return longest;
+  return longestsoFar;
 };
 nums = [100, 4, 200, 5, 1, 3, 2];
 
