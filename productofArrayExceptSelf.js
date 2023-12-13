@@ -1,10 +1,9 @@
 // You must write an algorithm that runs in O(n) time and without using the division operation.
 
-// the best way to tackle this problem is to multiple the product of everything before the current item num[i] and store it in the result curr index res[i] and then do the same thing for numbers that comes after the current index and store that in the res[i].
+// we need to solve this by using a prefix array which would calculate the product of every item before the currect item, and postfix array which would calculate the product of every item after the current item. And at last multiple those two arrays to get the result.
 
 function productofArrayExceptSelf (nums) {
     let res = new Array(nums.length).fill(1);
-
     prefix = 1;
     postfix = 1;
     for(let i=0; i < nums.length; i++ ){
