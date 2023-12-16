@@ -2,12 +2,16 @@ var maxArea = function (height) {
     let lp = 0
     let rp = height.length - 1
 
-    //sorting array
-    area.sort((a,b) => a- b);
+    let largestSoFar = 0
     while(lp < rp) {
-        let largestSoFar = 0
+
+        //width is the distance betwene the two lines 
+        let width = rp - lp;
+
         let area = height[lp] * height[rp];
         largestSoFar = Math.max(area, largestSoFar);
+        while(height[lp] === height[lp -1]) lp ++;
+        lp ++;
     }
     return largestSoFar
 }
