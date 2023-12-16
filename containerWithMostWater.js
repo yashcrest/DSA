@@ -4,11 +4,11 @@ var maxArea = function (height) {
 
     let largestSoFar = 0
     while(lp < rp) {
-
         //width is the distance betwene the two lines 
         let width = rp - lp;
-
-        let area = height[lp] * height[rp];
+        // this is to determine which of the 2 lines are shorter
+        let minumumHeight = Math.min(height[lp] , height[rp])
+        let area = width * minumumHeight;
         largestSoFar = Math.max(area, largestSoFar);
         while(height[lp] === height[lp -1]) lp ++;
         lp ++;
