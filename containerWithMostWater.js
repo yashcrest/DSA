@@ -10,8 +10,13 @@ var maxArea = function (height) {
         let minumumHeight = Math.min(height[lp] , height[rp])
         let area = width * minumumHeight;
         largestSoFar = Math.max(area, largestSoFar);
-        while(height[lp] === height[lp -1]) lp ++;
-        lp ++;
+
+        // move the pointer that points to the shorter lines
+        if(height[lp] < height[rp]) {
+            lp ++;
+        } else {
+            rp -- ;
+        }
     }
     return largestSoFar
 }
