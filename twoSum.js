@@ -1,6 +1,6 @@
 let array = [1, 2, 3, 4, 5, 6];
 
-function twoSum(arr, target) {
+function twoSum(array, target) {
   let hashMap = new Map();
   for (let i = 0; i < nums.length; i++) {
     let diff = target - nums[i];
