@@ -2,6 +2,9 @@ var threeSum = function (nums) {
   // first we need to sort this array
   nums.sort((a, b) => a - b);
   let res = [];
+  // first we need to sort this array
+  nums.sort((a, b) => a - b);
+  let res = [];
 
   for (let i = 0; i < nums.length - 2; i++) {
     //base case; this is ran everytime and will exit curr iteration if the succeeding number is the same
@@ -29,5 +32,6 @@ var threeSum = function (nums) {
   return res;
 };
 
+let nums = [-1, 0, 1, 2, -1, -4];
 let nums = [-1, 0, 1, 2, -1, -4];
 console.log(threeSum(nums));
