@@ -10,6 +10,7 @@ var threeSum = function (nums) {
     // we can use the same technique we used in 2sum II i.e. 2pointers technique
     let lp = i + 1;
     let rp = nums.length - 1;
+    //this condition is there to check if lp gone further than rp, if it does we will increment i
     while (lp < rp) {
       let sum = nums[lp] + nums[rp] + nums[i];
       if (sum === 0) {
@@ -17,6 +18,7 @@ var threeSum = function (nums) {
         // while on same iteration, check if there is other possible combination
         while (nums[lp] === nums[lp + 1]) lp++;
         while (nums[rp] === nums[rp - 1]) rp--;
+        //finally for the next iteration we will also need to iterate over new values of lp and rp
         lp++;
         rp--;
       } else if (sum < 0) {
