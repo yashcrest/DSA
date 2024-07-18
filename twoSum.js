@@ -1,16 +1,16 @@
-let array = [1, 2, 3, 4, 5, 6];
+let nums = [1, 2, 3, 4, 5, 6];
 
-function twoSum(array, target) {
-  let hashMap = new Map();
+function twoSum(nums, target) {
+  let map = new Map();
   for (let i = 0; i < nums.length; i++) {
-    let diff = target - nums[i];
-    if (hashMap.has(diff)) {
-      return [i, hashMap.get(diff)];
+    if (map.has(target - nums[i])) {
+      res = map.get(target - nums[i]);
+      return [res, i];
     } else {
-      hashMap.set(nums[i], i);
+      map.set(nums[i], i);
     }
   }
-  return []; // if the solution not present, return an empty array.
+  return []; // if the solution not present, return an empty nums.
 }
 
-console.log(twoSum(array, 5));
+console.log(twoSum(nums, 3));
